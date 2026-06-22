@@ -7,7 +7,7 @@ export default function Home() {
         <header className="max-w-4xl mx-auto text-center">
           <div className="inline-block rounded-full p-1 bg-gradient-to-tr from-violet-500 to-teal-400 floaty">
             <Image
-              src="/me.jfif"
+              src="/me.png"
               width={160}
               height={160}
               alt="Profile"
