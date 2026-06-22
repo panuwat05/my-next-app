@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0f1724; /* deep navy */
+  --surface: #0b1220;
+  --muted: #94a3b8;
+  --accent: #7c3aed; /* violet */
+  --accent-2: #06b6d4; /* teal */
+  --foreground: #e6eef8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html, body, #__next {
+  height: 100%;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Small helpers for the portfolio layout */
+.glass {
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255,255,255,0.04);
+  backdrop-filter: blur(8px);
+}
+
+.mono { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', monospace; }
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .25rem .6rem;
+  border-radius: .5rem;
+  background: rgba(255,255,255,0.03);
+  color: var(--foreground);
+  font-size: .85rem;
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+.tech {
+  background: linear-gradient(90deg, rgba(124,58,237,0.12), rgba(6,182,212,0.08));
+  color: var(--accent-2);
+  font-weight: 600;
+}
+
+.terminal-card {
+  background: linear-gradient(180deg, rgba(5,8,15,0.6), rgba(8,12,20,0.7));
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+.neon {
+  text-shadow: 0 2px 8px rgba(124,58,237,0.14);
+}
+
+@keyframes floaty { 0%{ transform: translateY(0)}50%{ transform: translateY(-6px)}100%{transform:translateY(0)} }
+.floaty { animation: floaty 6s ease-in-out infinite }
